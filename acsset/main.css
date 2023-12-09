@@ -1,21 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url('/img/c8ea277be20785e94c5f9817fd23654b.jpg');
-    background-size: cover;
-    /* Đảm bảo hình ảnh nền che hết màn hình */
-    background-position: center;
-    /* Căn giữa hình ảnh */
-    background-repeat: no-repeat;
-    /* Không lặp lại hình ảnh nền */
-    height: 100vh;
-    /* Thiết lập chiều cao bằng 100% chiều cao của viewport */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
+
 
 .snowflake {
     position: absolute;
