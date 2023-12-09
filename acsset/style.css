@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/img/moon-31665_1280.webp');
+    background-size: cover;
+    /* Đảm bảo hình ảnh nền che hết màn hình */
+    background-position: center;
+    /* Căn giữa hình ảnh */
+    background-repeat: no-repeat;
+    /* Không lặp lại hình ảnh nền */
+    height: 100vh;
+    /* Thiết lập chiều cao bằng 100% chiều cao của viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.part-1 h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+
+}
+
+.animated-text span:nth-child(4),
+.animated-text span:nth-child(8) {
+    padding: 0 4px;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+
+.animated-text {
+    display: inline-block;
+    font-size: 24px;
+}
+
+.part-1 button {
+    position: absolute;
+    top: 58%;
+    left: 45%;
+    right: 45%;
+    /* padding: 15px 54px; */
+    background-color: black;
+    padding: 15px 0;
+    text-decoration: none;
+    border-radius: 3px;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.part-1 button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.part-1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.part-1 button:hover .button {
+    color: black;
+}
+
+.snowflake {
+    position: absolute;
+    width: 3px; /* Adjust the size of the snowflakes */
+    height: 3px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-radius: 50%;
+    animation: snowfall 10s linear infinite;
+}
+
+
+
+@keyframes snowfall {
+    to {
+        transform: translateY(120vh) translateX(calc(100vw * var(--random-x))) rotate(360deg);
+    }
+}
+.snowflakes1 {
+    position: absolute;
+    
+    top: 0;
+    left: 25%;
+    right: 0;
+    background-color: white;
+    border-radius: 50%;
+    animation: snowfall 10s linear infinite;
+
+}
+.snowflakes2 {
+    position: absolute;
+
+    top: 0;
+    left: 70%;
+    right: 0;
+    background-color: white;
+    border-radius: 50%;
+    animation: snowfall 10s linear infinite;
+}
+@media screen and (max-width: 768px) {
+    .part-1 button {
+        left: 40%;
+        right: 40%;
+    }
+}
+

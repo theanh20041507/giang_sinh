@@ -1,0 +1,467 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/img/c8ea277be20785e94c5f9817fd23654b.jpg');
+    background-size: cover;
+    /* Đảm bảo hình ảnh nền che hết màn hình */
+    background-position: center;
+    /* Căn giữa hình ảnh */
+    background-repeat: no-repeat;
+    /* Không lặp lại hình ảnh nền */
+    height: 100vh;
+    /* Thiết lập chiều cao bằng 100% chiều cao của viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    width: 3px;
+    /* Adjust the size of the snowflakes */
+    height: 3px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-radius: 50%;
+    animation: snowfall 10s linear infinite;
+}
+
+
+
+@keyframes snowfall {
+    to {
+        transform: translateY(120vh) translateX(calc(100vw * var(--random-x))) rotate(360deg);
+    }
+}
+
+.snowflakes1 {
+    position: absolute;
+
+    top: 0;
+    left: 25%;
+    right: 0;
+    background-color: white;
+    border-radius: 50%;
+    animation: snowfall 10s linear infinite;
+
+}
+
+.snowflakes2 {
+    position: absolute;
+
+    top: 0;
+    left: 70%;
+    right: 0;
+    background-color: white;
+    border-radius: 50%;
+    animation: snowfall 10s linear infinite;
+}
+
+@media screen and (max-width: 768px) {
+    .part-1 button {
+        left: 40%;
+        right: 40%;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+
+.moon {
+    width: 100px;
+    height: 100px;
+    right: 0;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    position: absolute;
+    top: 38px;
+    left: 135px;
+
+    box-shadow: 0 0 20px 15px #f0f0f0;
+    /* Đổ bóng mặt trăng */
+
+    animation: glow 2s infinite alternate;
+    /* Áp dụng animation với tên 'glow', thời gian 2s, lặp vô hạn, và chuyển đổi ngược lại giữa các giai đoạn */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px 15px #b5a9a9;
+        /* Độ sáng ban đầu */
+    }
+
+    100% {
+        box-shadow: 0 0 40px 30px #cac0c0;
+        /* Độ sáng tăng lên */
+    }
+}
+
+/* Santa_Claus*/
+.Santa_Claus {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    /* left: -64px; */
+    /* right: -478px; */
+    overflow: hidden;
+
+}
+
+
+.Santa_Claus__container {
+    position: relative;
+    left: 100%;
+    transition: left 10s ease-in-out;
+}
+
+
+
+
+
+.Santa_Claus img {
+    position: relative;
+    top: 0;
+    width: 176px;
+
+}
+
+.coment {
+    position: absolute;
+    top: 0;
+    padding: 0 13px;
+    background-color: #fff;
+    border-radius: 3px;
+    display: inline-block;
+
+}
+
+.coment::before {
+    content: '';
+    position: absolute;
+    top: 29px;
+    left: -13px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 22px 12px 0px 1px;
+    border-color: transparent #ffffff transparent transparent;
+}
+
+/* star */
+.star {
+    position: absolute;
+    display: inline-block;
+    top: 224px;
+    left: -38px
+}
+
+.fa-star {
+    color: #ffcc00;
+    /* Màu của ngôi sao */
+    font-size: 3em;
+    /* Kích thước của ngôi sao */
+}
+
+.shine {
+    position: absolute;
+    /* width: 50px; */
+    padding: 50px;
+    border-radius: 50%;
+    top: 50%;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    animation: expandShine 2s infinite alternate;
+    background: radial-gradient(circle, rgba(234, 183, 14, 0.87) 0%, rgba(255, 210, 8, 0) 80%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/*slide*/
+/*slide*/
+.slide {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100vh;
+}
+/*  */
+.gift {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 35%;
+    /* -webkit-print-color-adjust: exact; */
+    justify-content: space-around;
+}
+
+.gift__list1,
+.gift__list2,
+.gift__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    bottom: -81%;
+    z-index: 1;
+
+}
+
+.gift__item1,
+.gift__item2,
+.gift__item {
+    position: relative;
+    margin-bottom: 20px;
+    /* Add some bottom margin between images */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gift__item2 img,
+.gift__item1 img,
+.gift__item img {
+    width: 65%;
+    /* padding: 20px; */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gift__item2 img:hover,
+.gift__item1 img:hover,
+.gift__item img:hover {
+    transform: scale(1.1);
+    /* Scale up the image on hover */
+}
+
+/* letter */
+.letter {
+    position: relative;
+    display: none;
+    overflow: hidden;
+}
+
+.letter1 {
+    position: relative;
+    width: 100vw;
+    height: 100;
+    display: none;
+}
+
+.letter2 {
+    position: relative;
+    width: 100vw;
+    height: 100;
+    display: none;
+}
+
+.letter img {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7%;
+    margin: 0 auto;
+    height: 80%;
+
+}
+
+.letter1 img,
+.letter2 img {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 42%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7%;
+    margin: 0 auto;
+    height: 50%;
+}
+
+
+.letter p {
+    position: absolute;
+    z-index: 2;
+    top: 127px;
+    font-size: 15px;
+    line-height: 18px;
+    right: 185px;
+    width: 50%;
+}
+
+.letter2 p,
+.letter1 p {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 38%;
+    top: 38%;
+    left: 31%;
+}
+
+.letter button {
+    position: absolute;
+    top: 24px;
+    right: 153px;
+    z-index: 2;
+    background-color: black;
+    padding: 3px 14px;
+    text-decoration: none;
+    border-radius: 3px;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.letter2 button,
+.letter1 button {
+    position: absolute;
+    top: 21px;
+    right: 32%;
+    z-index: 2;
+    background-color: black;
+    padding: 3px 14px;
+    text-decoration: none;
+    border-radius: 3px;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.letter2 button:hover,
+.letter1 button:hover,
+.letter button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.letter2 a,
+.letter1 a,
+.letter a {
+    color: white;
+    text-decoration: none;
+}
+
+.letter2 button:hover .button,
+.letter1 button:hover .button,
+.letter button:hover .button {
+    color: black;
+}
+
+.letter.show {
+    /* Hiển thị khi có lớp "show" */
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('/img/c8ea277be20785e94c5f9817fd23654b.jpg');
+        background-size: cover;
+        /* Đảm bảo hình ảnh nền che hết màn hình */
+        background-position: center;
+        /* Căn giữa hình ảnh */
+        background-repeat: no-repeat;
+        /* Không lặp lại hình ảnh nền */
+        height: 100vh;
+        /* Thiết lập chiều cao bằng 100% chiều cao của viewport */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .letter img {
+        background-size: cover;
+        /* Đảm bảo hình ảnh nền che hết màn hình */
+        background-position: center;
+        /* Căn giữa hình ảnh */
+        background-repeat: no-repeat;
+        /* Không lặp lại hình ảnh nền */
+        height: 80vh;
+        /* Thiết lập chiều cao bằng 100% chiều cao của viewport */
+    }
+
+    .letter p {
+        position: absolute;
+        z-index: 2;
+        top: 86px;
+        font-size: 14px;
+        line-height: 16px;
+        right: 71px;
+        width: 50%;
+    }
+
+    .letter button {
+        right: 57px;
+    }
+
+    .letter2 img,
+    .letter1 img {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        width: 64%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7%;
+        margin: 0 auto;
+        height: 68vh;
+    }
+
+    .letter2 p,
+    .letter1 p {
+        top: 19%;
+    }
+
+    .letter2 button,
+    .letter1 button {
+        right: 22%;
+    }
+
+    .coment {
+        position: absolute;
+        top: 0;
+        width: 95px;
+        font-size: 13px;
+        padding: 0 13px;
+        background-color: #fff;
+        border-radius: 3px;
+        display: inline-block;
+    }
+
+    .coment {
+        position: absolute;
+        top: 0;
+        width: 95px;
+        font-size: 13px;
+        padding: 0 13px;
+        background-color: #fff;
+        border-radius: 3px;
+        display: inline-block;
+    }
+
+    .slide {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 45vh;
+    }
+    .animated-text {
+        font-size: 14px;
+    }
+
+}
+

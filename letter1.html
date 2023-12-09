@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Fade In/Out Effect</title>
+    <!-- Include gsap library -->
+    <script src="https://unpkg.com/gsap@3.9.2"></script>
+    <style>
+        #animated-text {
+            font-family: 'Your Preferred Font', sans-serif;
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            text-align: justify;
+            letter-spacing: 1px;
+            cursor: pointer;
+            /* Đổi con trỏ khi di chuột vào văn bản */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="letter_1">
+        <img src="./img/letter1.jpg" alt="">
+        <p id="animated-text">
+            Chúc mừng Giáng Sinh! Dịp này, tôi gửi lời chúc ý nghĩa nhất đến bạn và gia đình: <br>
+        </p>
+    </div>
+
+    <script>
+        // Lấy ra phần tử văn bản
+        const animatedText = document.getElementById("animated-text");
+
+        // Thêm sự kiện khi click vào văn bản
+        animatedText.addEventListener("click", function () {
+            gsap.to(animatedText, {
+                opacity: 0, // Hiệu ứng mờ
+                duration: 1, // Thời gian mờ
+                onComplete: function () {
+                    // Hàm này được gọi khi hiệu ứng mờ hoàn thành
+                    gsap.to(animatedText, {
+                        opacity: 1, // Hiệu ứng đậm lên
+                        duration: 5, // Thời gian đậm lên
+                    });
+                },
+            });
+        });
+    </script>
+
+</body>
+
+</html>

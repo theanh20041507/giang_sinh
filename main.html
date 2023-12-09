@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/gsap@3.9.2"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+
+    <link rel="stylesheet" href="./acsset/main.css">
+    <link rel="stylesheet" href="./fontawesome/fontawesome-free-6.4.2-web/css/all.min.css">
+
+</head>
+
+<body>
+    <audio autoplay src="./acsset/2.mp3" type="audio/mp3"></audio>
+    <div class="snowflakes"></div>
+    <div class="snowflakes1"></div>
+    <div class="snowflakes2"></div>
+
+    <div class="container">
+
+        <div class="moon">
+
+        </div>
+        <div class="Santa_Claus">
+            <div class="Santa_Claus__container">
+
+                <img src="./img/ông già noel.png" alt="">
+                <div class="coment">
+                    <p>Hãy xem L.Thế gửi gì tới con ở ba hộp quà nhé ?</p>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+
+            <div class="slide_left">
+                <h1 class="animated-text" id="text-container">
+                    <span>M</span>
+                    <span>E</span>
+                    <span>R</span>
+                    <span>R</span>
+                    <span>Y</span>
+
+                </h1>
+            </div>
+            <div class="slide_right">
+                <h1 class="animated-text" id="text-container">
+                    <span>C</span>
+                    <span>H</span>
+                    <span>R</span>
+                    <span>I</span>
+                    <span>S</span>
+                    <span>T</span>
+                    <span>M</span>
+                    <span>A</span>
+                    <span>S</span>
+
+                </h1>
+            </div>
+        </div>
+        <div class="star" id="shiningStar">
+            <i class="fas fa-star"></i>
+            <div class="shine"></div>
+        </div>
+
+    </div>
+    <div class="gift">
+        <ul class="gift__list" id="giftList">
+            <li class="gift__item" id="giftItem">
+                <img src="./img/131211mau-hop-qua-dep-mat.png" alt="">
+            </li>
+        </ul>
+
+
+
+        <ul class="gift__list1" id="giftList1">
+            <li class="gift__item1" id="giftItem1">
+                <img src="./img/131211mau-hop-qua-dep-mat.png" alt="">
+            </li>
+        </ul>
+        <ul class="gift__list2" id="giftList2">
+            <li class="gift__item2">
+                <img src="./img/131211mau-hop-qua-dep-mat.png" alt="">
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="letter">
+        <img src="./img/letter1.jpg" alt="">
+        <p id="animated-text">Chúc mừng Giáng Sinh! Dịp này, tôi gửi lời chúc ý nghĩa nhất đến bạn và gia đình: <br>
+
+            Chúc bạn có một mùa Giáng Sinh tràn ngập niềm vui, hạnh phúc và ấm áp bên những người thân yêu. Mong
+            rằng những khoảnh khắc bình yên và ấm cúng này sẽ điểm xuyết thêm cho cuộc sống của bạn.
+
+            Giáng Sinh không chỉ là dịp để chia sẻ quà tặng mà còn là thời điểm để chia sẻ tình yêu, lòng nhân
+            ái và lòng biết ơn. Chúc bạn có thời gian ý nghĩa, nơi bạn cảm nhận được ý nghĩa sâu sắc của tình
+            thân và sự đoàn kết.
+
+            Mong rằng năm mới sắp đến sẽ mang lại nhiều cơ hội mới, thành công và hạnh phúc cho bạn và những
+            người thân yêu. Hãy tận hưởng từng khoảnh khắc và xây dựng những kỷ niệm đáng nhớ.
+
+            Chúc bạn và gia đình có một mùa Giáng Sinh tràn đầy ý nghĩa và hạnh phúc!
+
+
+
+
+
+
+        </p>
+        <button id="closeButton"><a href="#" class="button">X</a></button>
+    </div>
+    <div class="letter1">
+        <img src="./img/letter2.jpg" alt="">
+        <p id="animated-text">Ai đang đọc tin nhắn này là những người rất đặc biệt
+            trong trái tim tôi! Vì thế, hãy tự hào rằng mỗi sáng khi bạn thức dậy
+            vẫn có tôi đang nghĩ đến bạn. Tự tin với chính mình rằng dù bạn không
+            cao thì vẫn có tôi đang ngước nhìn bạn! Tôi đủ tự tin để nói cho bạn
+            biết bạn quan trọng và hoàn hảo trong mắt tôi thế nào. Chúc bạn một
+            mùa Noel vui vẻ và ấm áp.
+
+
+
+
+
+
+        </p>
+        <button id="closeButton1"><a href="#" class="button">X</a></button>
+    </div>
+    <div class="letter2">
+        <img src="./img/lettter3.jpg" alt="">
+        <p id="animated-text"> Chân thành chúc mừng bạn trên hành trình tìm kiếm
+            tình yêu. Hãy để trái tim mở cửa đón nhận, và tin rằng đối tác đích thực
+            sẽ đến vào thời điểm đúng. Hãy trải nghiệm mỗi khoảnh khắc, học hỏi từ những
+            gặp gỡ, và xây dựng mối quan hệ bền vững, chứa đựng những kỷ niệm ngọt ngào.
+            Chúc bạn hạnh phúc và gặp được một nửa của đời mình!
+
+
+
+
+
+        </p>
+        <button id="closeButton2"><a href="#" class="button">X</a></button>
+    </div>
+
+    <script src="./js/main1.js"></script>
+
+
+</body>
+
+</html>
