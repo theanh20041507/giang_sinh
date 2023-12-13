@@ -35,8 +35,40 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //
-document.getElementById('yesButton').addEventListener('click', function() {
-    window.location.href = 'main.html';
-});
 
 //
+var button = document.getElementById('yesButton');
+var counting = true;
+
+function countdownAndChangeText() {
+    var count = 10;
+
+    function countStep() {
+        if (count >= 1) {
+            button.innerHTML = count;
+            count--;
+            setTimeout(countStep, 1000);
+            button.style.color = 'white';
+        } else {
+            button.innerHTML = 'Yes';
+            counting = false; // Đã hoàn tất đếm
+            button.style.color = 'white'; // Đặt màu sắc thành trắng khi đếm xong
+        }
+    }
+
+    countStep();
+}
+
+// Sự kiện click sẽ được ngăn chặn khi đang trong quá trình đếm
+button.addEventListener('click', function () {
+    if (!counting) {
+        window.location.href = 'main.html';
+        // Đặt lại trạng thái đếm khi nút được nhấp
+        counting = true;
+        countdownAndChangeText();
+    }
+});
+
+// Bắt đầu đếm khi trang đã tải hoàn toàn
+document.addEventListener('DOMContentLoaded', countdownAndChangeText);
+

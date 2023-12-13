@@ -131,3 +131,12 @@ anime.timeline({ loop: true })
     });
 
 
+//
+// Get the button element by its ID
+var facebookButton = document.getElementById("facebook");
+
+// Add a click event listener to the button
+facebookButton.addEventListener("click", function () {
+    // Redirect to the specified URL
+    window.location.href = "https://www.facebook.com/profile.php?id=100040189193891";
+});

@@ -1,3 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/img/moon-31665_1280.webp');
+    background-size: cover;
+    /* Đảm bảo hình ảnh nền che hết màn hình */
+    background-position: center;
+    /* Căn giữa hình ảnh */
+    background-repeat: no-repeat;
+    /* Không lặp lại hình ảnh nền */
+    height: 100vh;
+    /* Thiết lập chiều cao bằng 100% chiều cao của viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
 
 .part-1 h1 {
@@ -72,7 +89,8 @@
 
 .snowflake {
     position: absolute;
-    width: 3px; /* Adjust the size of the snowflakes */
+    width: 3px;
+    /* Adjust the size of the snowflakes */
     height: 3px;
     top: 0;
     left: 0;
@@ -89,9 +107,10 @@
         transform: translateY(120vh) translateX(calc(100vw * var(--random-x))) rotate(360deg);
     }
 }
+
 .snowflakes1 {
     position: absolute;
-    
+
     top: 0;
     left: 25%;
     right: 0;
@@ -100,6 +119,7 @@
     animation: snowfall 10s linear infinite;
 
 }
+
 .snowflakes2 {
     position: absolute;
 
@@ -110,10 +130,10 @@
     border-radius: 50%;
     animation: snowfall 10s linear infinite;
 }
+
 @media screen and (max-width: 768px) {
     .part-1 button {
         left: 40%;
         right: 40%;
     }
 }
-
