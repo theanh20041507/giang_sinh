@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('/img/c8ea277be20785e94c5f9817fd23654b.jpg');
+    background-image: url('https://cdn.tgdd.vn/Files/2021/12/22/1406221/cover_1280x720-800-resize.jpg');
     background-size: cover;
     /* Đảm bảo hình ảnh nền che hết màn hình */
     background-position: center;
@@ -702,6 +702,7 @@ body {
         --color5: plum;
         --color6: lavender;
         --finalSize: 45vmin;
+        z-index: 2;
         left: 30%;
         top: 49%;
         animation-delay: -0.25s;
