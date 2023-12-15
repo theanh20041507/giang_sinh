@@ -72,3 +72,8 @@ button.addEventListener('click', function () {
 // Bắt đầu đếm khi trang đã tải hoàn toàn
 document.addEventListener('DOMContentLoaded', countdownAndChangeText);
 
+//
+if (window.innerWidth < window.innerHeight) {
+    // Thiết lập chế độ xoay ngang nếu đang ở chế độ đứng
+    document.body.style.orientation = 'landscape';
+}

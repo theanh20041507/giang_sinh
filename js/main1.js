@@ -140,3 +140,9 @@ facebookButton.addEventListener("click", function () {
     // Redirect to the specified URL
     window.location.href = "https://www.facebook.com/profile.php?id=100040189193891";
 });
+
+//
+if (window.innerWidth < window.innerHeight) {
+    // Thiết lập chế độ xoay ngang nếu đang ở chế độ đứng
+    document.body.style.orientation = 'landscape';
+}

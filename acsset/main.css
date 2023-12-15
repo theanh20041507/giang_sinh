@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('https://cdn.tgdd.vn/Files/2021/12/22/1406221/cover_1280x720-800-resize.jpg');
+    background-image: url('https://www.bing.com/images/blob?bcid=REl-tclCwm4GRIAOzVnf3IY30es......3w');
     background-size: cover;
     /* Đảm bảo hình ảnh nền che hết màn hình */
     background-position: center;
@@ -16,6 +16,8 @@ body {
     position: relative;
     overflow: hidden;
 }
+
+
 
 
 .snowflake {
@@ -692,6 +694,7 @@ body {
         left: 22%;
         right: 22%;
     }
+
     .firework:nth-child(2),
     .firework:nth-child(2)::before,
     .firework:nth-child(2)::after {
