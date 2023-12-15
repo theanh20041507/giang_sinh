@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     createSnowflakes(".snowflakes", 0); // Group 1 with delay 0s
     createSnowflakes(".snowflakes1", 1); // Group 2 with delay 5s
     createSnowflakes(".snowflakes2", 2); // Group 3 with delay 10s
+    createSnowflakes(".snowflakes3", 2); // Group 3 with delay 10s
+    createSnowflakes(".snowflakes4", 2); // Group 3 with delay 10s
 
     function createSnowflakes(containerSelector, delay) {
         const snowflakesContainer = document.querySelector(containerSelector);

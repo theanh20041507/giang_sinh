@@ -134,6 +134,26 @@ body {
     border-radius: 50%;
     animation: snowfall 10s linear infinite;
 }
+.snowflakes3 {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+    right: 0;
+    background-color: white;
+    border-radius: 50%;
+    animation: snowfall 10s linear infinite;
+}
+.snowflakes4 {
+    position: absolute;
+
+    top: 0;
+    left: 70%;
+    right: 0;
+    background-color: white;
+    border-radius: 90%;
+    animation: snowfall 10s linear infinite;
+}
 
 @media screen and (max-width: 768px) {
     .part-1 button {
