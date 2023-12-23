@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     createSnowflakes(".snowflakes", 0); // Group 1 with delay 0s
-    createSnowflakes(".snowflakes1", 1); // Group 2 with delay 5s
-    createSnowflakes(".snowflakes2", 2); // Group 3 with delay 10s
-    createSnowflakes(".snowflakes3", 3); // Group 3 with delay 10s
+    createSnowflakes(".snowflakes1", 2); // Group 2 with delay 5s
+    createSnowflakes(".snowflakes2", 3); // Group 3 with delay 10s
+    createSnowflakes(".snowflakes3", 1); // Group 3 with delay 10s
 
     createSnowflakes(".snowflakes4", 4); // Group 3 with delay 10s
 
@@ -46,9 +46,46 @@ document.addEventListener("DOMContentLoaded", function () {
     var letterDiv = document.querySelector(".letter");
     var closeButton = document.getElementById("closeButton");
 
+    // Typewriter effect implementation
+    const text = document.getElementById('animated-text').textContent.trim();
+    document.getElementById('animated-text').textContent = '';
+
+    let i = 0;
+    let isTyping = false; // Biến để kiểm tra xem hiệu ứng typewriter đang chạy hay không
+
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById('animated-text').textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 20); // Adjust the speed here (in milliseconds)
+        } else {
+            isTyping = false; // Kết thúc hiệu ứng
+        }
+    }
+
+    // Function to stop typewriter effect
+    function stopTypewriter() {
+        isTyping = false;
+        i = text.length; // Set i to the end of the text to stop typing immediately
+    }
+
+    // Event listener for the "giftList" click
     giftList.addEventListener("click", function () {
         // Toggle visibility of the letter
         letterDiv.style.display = (letterDiv.style.display === "none" || letterDiv.style.display === "") ? "block" : "none";
+
+        // Stop the typewriter effect if it is currently running
+        if (isTyping) {
+            stopTypewriter();
+        }
+
+        // Start the typewriter effect when the letter becomes visible and isTyping is false
+        if (letterDiv.style.display === "block" && !isTyping) {
+            document.getElementById('animated-text').textContent = ''; // Clear the existing text
+            i = 0; // Reset the index for typewriter effect
+            isTyping = true;
+            typeWriter();
+        }
     });
 
     closeButton.addEventListener("click", function (event) {
@@ -57,8 +94,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Hide the letter when the close button is clicked
         letterDiv.style.display = "none";
+
+        // Stop the typewriter effect
+        stopTypewriter();
     });
 });
+
+
 
 //
 document.addEventListener("DOMContentLoaded", function () {
@@ -66,9 +108,44 @@ document.addEventListener("DOMContentLoaded", function () {
     var letterDiv = document.querySelector(".letter1");
     var closeButton = document.getElementById("closeButton1");
 
+    // Typewriter effect implementation
+    const text = document.getElementById('animated-text1').textContent.trim();
+    document.getElementById('animated-text1').textContent = '';
+
+    let i = 0;
+    let isTyping = false;
+
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById('animated-text1').textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 20); // Adjust the speed here (in milliseconds)
+        } else {
+            isTyping = false;
+        }
+    }
+
+    function stopTypewriter() {
+        isTyping = false;
+        i = text.length;
+    }
+
     giftList.addEventListener("click", function () {
         // Toggle visibility of the letter
         letterDiv.style.display = (letterDiv.style.display === "none" || letterDiv.style.display === "") ? "block" : "none";
+
+        // Stop the typewriter effect if it is currently running
+        if (isTyping) {
+            stopTypewriter();
+        }
+
+        // Start the typewriter effect when the letter becomes visible and isTyping is false
+        if (letterDiv.style.display === "block" && !isTyping) {
+            document.getElementById('animated-text1').textContent = ''; // Clear the existing text
+            i = 0;
+            isTyping = true;
+            typeWriter();
+        }
     });
 
     closeButton.addEventListener("click", function (event) {
@@ -77,17 +154,56 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Hide the letter when the close button is clicked
         letterDiv.style.display = "none";
+
+        // Stop the typewriter effect
+        stopTypewriter();
     });
 });
+
 //
 document.addEventListener("DOMContentLoaded", function () {
     var giftList = document.getElementById("giftList2");
     var letterDiv = document.querySelector(".letter2");
     var closeButton = document.getElementById("closeButton2");
 
+    // Typewriter effect implementation
+    const text = document.getElementById('animated-text2').textContent.trim();
+    document.getElementById('animated-text2').textContent = '';
+
+    let i = 0;
+    let isTyping = false;
+
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById('animated-text2').textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 20); // Adjust the speed here (in milliseconds)
+        } else {
+            isTyping = false;
+        }
+    }
+
+    function stopTypewriter() {
+        isTyping = false;
+        i = text.length;
+    }
+
     giftList.addEventListener("click", function () {
         // Toggle visibility of the letter
         letterDiv.style.display = (letterDiv.style.display === "none" || letterDiv.style.display === "") ? "block" : "none";
+
+        // Stop the typewriter effect if it is currently running
+        if (isTyping) {
+            stopTypewriter();
+        }
+
+        // Start the typewriter effect when the letter becomes visible and isTyping is false
+        if (letterDiv.style.display === "block" && !isTyping) {
+            document.getElementById('animated-text2').textContent = ''; // Clear the existing text
+            i = 0;
+            isTyping = true;
+            typeWriter();
+        }
     });
 
     closeButton.addEventListener("click", function (event) {
@@ -96,8 +212,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Hide the letter when the close button is clicked
         letterDiv.style.display = "none";
+
+        // Stop the typewriter effect
+        stopTypewriter();
     });
 });
+
 //
 const container = document.querySelector('.Santa_Claus__container');
 
@@ -109,7 +229,7 @@ function animate() {
         setTimeout(() => {
             requestAnimationFrame(animate);
         }, 10000); // 10 seconds pause
-    }, 4000); // 4 seconds pause before going back to 0%
+    }, 2000); // 4 seconds pause before going back to 0%
 }
 
 requestAnimationFrame(animate); // Start the animation

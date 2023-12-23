@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url('https://www.bing.com/images/blob?bcid=REl-tclCwm4GRIAOzVnf3IY30es......3w');
+    background-image: url('https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/413862009_122130963452060973_4126528979978425080_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=3635dc&_nc_ohc=nSB_ybtB8-wAX-o2kYw&_nc_ht=scontent.fhan5-9.fna&oh=00_AfAJCPNrRhzwqCz3scVLbMYETY1BX6WatTjH2iuqw4hUuA&oe=658BFF2B');
     background-size: cover;
     /* Đảm bảo hình ảnh nền che hết màn hình */
     background-position: center;
@@ -258,10 +258,25 @@ body {
 .gift__item2 img,
 .gift__item1 img,
 .gift__item img {
+    animation: falling 12s ease-in-out;
     width: 65%;
     /* padding: 20px; */
     transition: transform 0.3s ease-in-out;
 }
+
+@keyframes falling {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
 
 .gift__item2 img:hover,
 .gift__item1 img:hover,
@@ -271,6 +286,10 @@ body {
 }
 
 /* letter */
+
+
+
+
 .letter {
     position: relative;
     display: none;
