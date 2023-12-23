@@ -801,4 +801,24 @@ body {
         top: 35%;
         animation-delay: -0.8s;
     }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/413862009_122130963452060973_4126528979978425080_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=3635dc&_nc_ohc=nSB_ybtB8-wAX-o2kYw&_nc_ht=scontent.fhan5-9.fna&oh=00_AfAJCPNrRhzwqCz3scVLbMYETY1BX6WatTjH2iuqw4hUuA&oe=658BFF2B');
+        background-size: cover;
+        /* Đảm bảo hình ảnh nền che hết màn hình */
+        background-position: center;
+        /* Căn giữa hình ảnh */
+        background-repeat: no-repeat;
+        /* Không lặp lại hình ảnh nền */
+        height: 100vh;
+        /* Thiết lập chiều cao bằng 100% chiều cao của viewport */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+
 }
